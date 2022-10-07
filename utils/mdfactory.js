@@ -35,13 +35,18 @@ var factory = {
         return this;
     },
 
+    subTitle : function(string) {
+        this.title += `\n\n${string}`
+        return this
+    },
+
     addComp : function(subTitle, content) {
         this.comps[subTitle] = { title : builder.mkSubTitle(subTitle), body : content }
         return this;
     },
 
     appendContent : function(targetComp , content) {
-        this.comps[targetComp].body += content;
+        this.comps[targetComp].body += `\n\n${content}`;
         return this;
     },
 

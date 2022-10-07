@@ -6,10 +6,10 @@ const md = require("./utils/mdfactory")
 // TODO: Create an array of questions for user input
 const questions = [
     {message : "Please enter you GitHub username : ", type : "input", name : "gitUser"},
-    {message : "Please enter you email address : ", type : "input", name : "gitUser"},
+    {message : "Please enter your email address : ", type : "input", name : "email"},
     {message : "Please enter a project title : ", type : "input", name : "title"},
-    {message : "Please select a LICENSE for your project : ", type : "list", choices : ["MIT", "GPLv3", "GPL"], name : "license"},
     {message : "Project description : ", type : "input", name : "desc"},
+    {message : "Please select a LICENSE for your project : ", type : "list", choices : ["MIT", "GPLv3", "GPL"], name : "license"},
     {message : "Project installation steps : ", type : "input", name : "install"},
     {message : "Project usage information : ", type : "input", name : "usageInfo"},
     {message : "Project contribution guidelines : ", type : "input", name : "guideLines"},
@@ -28,18 +28,17 @@ function init() {
     inquirer.prompt([...questions])
     .then(
         (data) => {
-            console.log(data)
-            md.factory.new(data.title)
+            md.factory.new(data.title).subTitle(md.builder.mkLicenseBadge(data.license))
                 .addComp("Description", data.desc)
                 .addComp("Installation", `\`${data.install}\``)
                 .addComp("Usage", data.usageInfo)
-                .addComp("License", md.builder.mkLicenseBadge(data.license))
+                .addComp("License", `This project is covered under the [${data.license}](https://opensource.org/licenses/${data.license}) license.`)
                 .addComp("Contribution Guidelines", data.guideLines)
                 .addComp("Testing Instructions", data.testing)
                 .addComp("Questions", md.builder.mkHyperLink(data.gitUser, `https://github.com/${data.gitUser}`))
-                .appendContent("Questions")
+                .appendContent("Questions", md.builder.mkHyperLink(data.email, data.email))
             
-                writeToFile("README.md", md.factory.build())
+            writeToFile("README.md", md.factory.build())
 
         }
     )

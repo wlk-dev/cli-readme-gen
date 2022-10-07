@@ -1,20 +1,27 @@
-# PP
+# Cool Stuffs
+
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ## Table of Contents
-* [License](#license)
 * [Description](#description)
+* [Installation](#installation)
 * [Usage](#usage)
+* [License](#license)
 * [Contribution Guidelines](#contribution-guidelines)
 * [Testing Instructions](#testing-instructions)
-* [Main Contributor](#main-contributor)
-## License
-![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+* [Questions](#questions)
 ## Description
-none
+This does cool stuff.
+## Installation
+`N/A`
 ## Usage
-none
+N/A
+## License
+This project is covered under the [MIT](https://opensource.org/licenses/MIT) license.
 ## Contribution Guidelines
-n one
+Small commits.
 ## Testing Instructions
-
-## Main Contributor
+N/A
+## Questions
 [wlk-dev](https://github.com/wlk-dev)
+
+[william.koelling@gmail.com](william.koelling@gmail.com)
