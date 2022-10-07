@@ -28,7 +28,7 @@ function init() {
     inquirer.prompt([...questions])
     .then(
         (data) => {
-            md.factory.new(data.title).subTitle(md.builder.mkLicenseBadge(data.license))
+            md.factory.new(data.title).subTitle(  md.builder.mkHyperLink(md.builder.mkLicenseBadge(data.license), `https://opensource.org/licenses/${data.license}`)  )
                 .addComp("Description", data.desc)
                 .addComp("Installation", `\`${data.install}\``)
                 .addComp("Usage", data.usageInfo)

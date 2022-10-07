@@ -1,6 +1,6 @@
-# Cool Stuffs
+# Cool Project
 
-![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 ## Table of Contents
 * [Description](#description)
 * [Installation](#installation)
@@ -10,9 +10,9 @@
 * [Testing Instructions](#testing-instructions)
 * [Questions](#questions)
 ## Description
-This does cool stuff.
+This is a cool project
 ## Installation
-`N/A`
+`npm i`
 ## Usage
 N/A
 ## License
