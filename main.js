@@ -38,7 +38,7 @@ function init() {
                 .addComp("Questions", md.builder.mkHyperLink(data.gitUser, `https://github.com/${data.gitUser}`))
                 .appendContent("Questions", md.builder.mkHyperLink(data.email, data.email))
             
-            writeToFile("README.md", md.factory.build())
+            writeToFile("./output/README.md", md.factory.build())
 
         }
     )
